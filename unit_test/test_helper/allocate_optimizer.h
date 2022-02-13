@@ -29,14 +29,18 @@
 
 #include <memory>
 
+#include "g2o_test_helper_api.h"
+
 namespace g2o {
 
 class SparseOptimizer;
 
 namespace internal {
 
-std::unique_ptr<g2o::SparseOptimizer> createOptimizerForTests();
-std::unique_ptr<g2o::SparseOptimizer> createLmOptimizerForTests();
+// clang-format off
+G2O_TEST_HELPER_API std::unique_ptr<g2o::SparseOptimizer> createOptimizerForTests();
+G2O_TEST_HELPER_API std::unique_ptr<g2o::SparseOptimizer> createLmOptimizerForTests();
+// clang-format on
 
 }  // namespace internal
 }  // namespace g2o
